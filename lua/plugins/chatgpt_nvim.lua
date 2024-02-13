@@ -1,4 +1,5 @@
 -- This plugins adds ChatGPT support to the editor. (note: you need an API key for this an it costs a little money)
+-- NOTE: You need to add your openai API key as an environment variable (OPENAI_API_KEY)
 
 return {
 	"jackMort/ChatGPT.nvim",
