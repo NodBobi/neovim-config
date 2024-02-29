@@ -32,10 +32,6 @@ return {
 				capabilities = capabilities
 			})
 
-			lspconfig.json_lsp.setup({
-				capabilities = capabilities
-			})
-
 			vim.keymap.set("n", "<leader>sd", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
