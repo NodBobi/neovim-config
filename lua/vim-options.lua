@@ -1,16 +1,15 @@
 vim.cmd("set number")
-vim.cmd("color tokyonight-night")
+vim.cmd("color catppuccin-mocha")
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.g.mapleader = " "
 
 -- Set custom commands to run on neovim startup
-vim.cmd(":Neotree filesystem reveal left")
 
 -- Set custom keymap bindings
 -- Open this config directory
-vim.keymap.set("n", "<leader>config", ":edit /home/luukas/.config/nvim/init.lua | :Neotree filesystem reveal left dir=~/.config/nvim<CR>", {})
+vim.keymap.set("n", "<leader>config", ":edit /home/luukas/.config/nvim/init.lua | :cd ~/.config/nvim <CR>", {})
 -- Open a file finder in telescope
 vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>")
 -- Open a live grep on telescope
@@ -25,6 +24,8 @@ vim.keymap.set("n", "<leader>wsh", ":wa | :split | :terminal<CR>")
 vim.keymap.set("n", "<leader>csh", ":Cheatsheet<CR>")
 -- Open the ChatGPT window
 vim.keymap.set("n", "<leader>gpt", ":ChatGPT<CR>");
+-- Open the todos menu
+vim.keymap.set("n", "<leader>todo", ":TodoTelescope<CR>");
 
 -- Custom functionality
 vim.keymap.set("n", "<leader>raw", function()
