@@ -1,9 +1,12 @@
 vim.cmd("set number")
+vim.opt.foldlevelstart = 99
 vim.cmd("color catppuccin-mocha")
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.g.mapleader = " "
+vim.g.maplocalleader = ","
+vim.opt.conceallevel = 3
 
 -- Set custom commands to run on neovim startup
 
