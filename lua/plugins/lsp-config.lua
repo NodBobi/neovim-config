@@ -32,9 +32,13 @@ return {
 				capabilities = capabilities
 			})
 
+			-- se: Show Explanation
 			vim.keymap.set('n', '<leader>se', vim.diagnostic.open_float, {})
+			-- sd: Show definition
 			vim.keymap.set("n", "<leader>sd", vim.lsp.buf.hover, {})
+			-- gd: Go to definition
 			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
+			-- ca: Code Action
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
 		end,
 	},

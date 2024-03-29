@@ -16,7 +16,7 @@ return {
 		}
 	},
 	{
-		'onsails/lspkind.nvim',
+		'onsails/lspkind.nvim', -- VS-code like UI for the cmp autosuggestion engine
 		lazy = false,
 	},
 	{
@@ -48,8 +48,8 @@ return {
 					documentation = cmp.config.window.bordered({ border = "shadow" }),
 				},
 				mapping = cmp.mapping.preset.insert({
-					['<C-j>'] = cmp.mapping.scroll_docs(-4),
-					['<C-k>'] = cmp.mapping.scroll_docs(4),
+					['<C-k>'] = cmp.mapping.scroll_docs(-4),
+					['<C-j>'] = cmp.mapping.scroll_docs(4),
 					['<C-Space>'] = cmp.mapping.complete(),
 					['<C-e>'] = cmp.mapping.abort(),
 					['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.

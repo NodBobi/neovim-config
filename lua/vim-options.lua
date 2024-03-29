@@ -13,8 +13,10 @@ vim.opt.conceallevel = 3
 -- Open this config directory
 vim.keymap.set("n", "<leader>config", ":edit /home/luukas/.config/nvim/init.lua | :cd ~/.config/nvim<CR>", {})
 -- Open a file finder in telescope
+-- ff: File Finder
 vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>")
 -- Open a live grep on telescope
+-- lg: Live Grep
 vim.keymap.set("n", "<leader>lg", ":Telescope live_grep<CR>")
 -- Open a (horizontal) terminal in a new buffer
 vim.keymap.set("n", "<leader>term", ":split | :terminal<CR>")
