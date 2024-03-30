@@ -27,19 +27,6 @@ return {
 			local luasnip = require("luasnip")
 			require("config.snippets")
 
-			-- Map the keys for moving in the snippet inputs
-			vim.keymap.set({ "i", "s" }, "<C-l>", function()
-				if luasnip.expand_or_jumpable() then
-					luasnip.expand_or_jump()
-				end
-			end, { silent = true })
-
-			vim.keymap.set({ "i", "s" }, "<C-k>", function()
-				if luasnip.jumpable(-1) then
-					luasnip.jump(-1)
-				end
-			end, { silent = true })
-
 			local has_words_before = function()
 				unpack = unpack or table.unpack
 				local line, col = unpack(vim.api.nvim_win_get_cursor(0))

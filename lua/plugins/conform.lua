@@ -32,14 +32,6 @@ return {
 				async = false,
 			},
 		})
-
-		vim.keymap.set("n", "<leader>gf", function()
-			require("conform").format({
-				lsp_fallback = true,
-				timeout_ms = 500,
-				async = false,
-			})
-		end)
 	end,
 	opts = {},
 }

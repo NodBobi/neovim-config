@@ -12,11 +12,15 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Import custom keymaps
-require("config.keymaps")
+-- Map the leader keys (cannot map in keymaps.lua, because it would break things).
+vim.g.mapleader = " "
+vim.g.maplocalleader = ","
 
 -- Start the lazy plugin manager
 require("lazy").setup("plugins")
+
+-- Import custom keymaps
+require("config.keymaps")
 
 -- Import the options file
 require("config.options")
