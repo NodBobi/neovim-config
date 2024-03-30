@@ -1,8 +1,8 @@
 vim.cmd("set relativenumber")
 vim.cmd("color gruvbox-material")
 vim.opt.foldlevelstart = 99
-vim.opt.expandtab = true
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
+vim.opt.expandtab = true -- Pressing TAB will insert spaces instead of TAB.
+vim.opt.tabstop = 4 -- A TAB character which is 4 spaces
+vim.opt.softtabstop = 4 -- Number of spaces inserted when pressing TAB
+vim.opt.shiftwidth = 4 -- Number of spaces inserted when indenting a character
 vim.opt.conceallevel = 3

@@ -7,11 +7,13 @@ return {
 		require("conform").setup({
 			-- Rules to different formatters.
 			formatters = {
-				prettier = {
+				["prettier"] = {
 					prepend_args = { "--tab-width", "4", "--use-tabs" },
 				},
-				clang_format = {
-					prepend_args = { "-style=", "{UseTabs: Always, IndentWidth: 4, TabWidth: 4}" },
+				["clang-format"] = {
+					inherit = false,
+					command = "clang-format",
+					args = { "-style", "WebKit" },
 				},
 			},
 
@@ -19,13 +21,23 @@ return {
 			formatters_by_ft = {
 				lua = { "stylua" },
 				javascript = { "prettier" },
+				typescript = { "prettier" },
+				sh = { "beautysh" },
 				c = { "clang-format" },
+			},
+
+			format_on_save = {
+				timeout_ms = 500,
+				lsp_fallback = true,
+				async = false,
 			},
 		})
 
 		vim.keymap.set("n", "<leader>gf", function()
 			require("conform").format({
 				lsp_fallback = true,
+				timeout_ms = 500,
+				async = false,
 			})
 		end)
 	end,
