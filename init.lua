@@ -1,3 +1,4 @@
+-- Install lazy.nvim, the nvim package manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -11,8 +12,14 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- Map the leader keys
 vim.g.mapleader = " ";
 vim.g.maplocalleader = ","
 
 require("lazy").setup("plugins");;
-require("vim-options")
+
+-- Import the options file
+require("options")
+
+-- Import custom keymaps
+require("keymaps")

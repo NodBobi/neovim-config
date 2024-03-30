@@ -1,13 +1,6 @@
-vim.cmd("set relativenumber")
-vim.opt.foldlevelstart = 99
-vim.cmd("color gruvbox-material")
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.g.mapleader = " "
-vim.opt.conceallevel = 3
-
--- Set custom commands to run on neovim startup
+--[[
+	CUSTOM LUA KEYMAPS CAN BE FOUND HERE.
+--]]
 
 -- Set custom keymap bindings
 -- Open this config directory
@@ -31,9 +24,9 @@ vim.keymap.set("n", "<leader>gpt", ":ChatGPT<CR>");
 -- Open the todos menu
 vim.keymap.set("n", "<leader>todo", ":TodoTelescope<CR>");
 -- Go to the end of the current line:
-vim.keymap.set("n", "<leader>el", "$");
+-- vim.keymap.set("n", "<leader>el", "$");
 -- Go to the beginning of the line
-vim.keymap.set("n", "<leader>bl", "0");
+-- vim.keymap.set("n", "<leader>bl", "0");
 
 
 -- Custom functionality
