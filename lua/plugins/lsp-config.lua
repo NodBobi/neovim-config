@@ -19,6 +19,7 @@ return {
 		"neovim/nvim-lspconfig",
 		lazy = false,
 		config = function()
+            -- CMP nvim is the autocompletion engine.
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 			local lspconfig = require("lspconfig")
