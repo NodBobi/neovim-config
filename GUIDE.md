@@ -6,6 +6,9 @@ This includes stuff such as:
 
 ### How to install and configure a new LSP server.
 To install and configure a new LSP server, use the Mason plugin to install the server.
+Mason is a tool which installs the LSPs on your system so you don't have to. Without Mason
+you'd have to install every single language server through, for example npm.
+Run the following command to see language  servers available for install.
 ```
 :Mason
 ```
@@ -18,3 +21,6 @@ lspconfig.language_server_name.setup({
 })
 ```
 **That's it**, you should be good to go!
+
+### DOCUMENTATION:
+- [Configuring a new formatter](https://github.com/stevearc/conform.nvim)

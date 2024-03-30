@@ -10,16 +10,16 @@ return {
 				prettier = {
 					prepend_args = { "--tab-width", "4", "--use-tabs" },
 				},
-                clang_format = {
-                    prepend_args = {"-style=", "{UseTabs: Always, IndentWidth: 4, TabWidth: 4}"}, 
-                }
+				clang_format = {
+					prepend_args = { "-style=", "{UseTabs: Always, IndentWidth: 4, TabWidth: 4}" },
+				},
 			},
 
 			-- Specify different formatters for different filetypes
 			formatters_by_ft = {
 				lua = { "stylua" },
 				javascript = { "prettier" },
-                c = { "clang-format" },
+				c = { "clang-format" },
 			},
 		})
 
