@@ -12,14 +12,12 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Map the leader keys
-vim.g.mapleader = " ";
-vim.g.maplocalleader = ","
+-- Import custom keymaps
+require("config.keymaps")
 
+-- Start the lazy plugin manager
 require("lazy").setup("plugins");;
 
 -- Import the options file
-require("options")
+require("config.options")
 
--- Import custom keymaps
-require("keymaps")
