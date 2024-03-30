@@ -2,6 +2,10 @@
 	CUSTOM LUA KEYMAPS CAN BE FOUND HERE.
 --]]
 
+-- Map the leader keys
+vim.g.mapleader = " ";
+vim.g.maplocalleader = ","
+
 -- Set custom keymap bindings
 -- Open this config directory
 vim.keymap.set("n", "<leader>config", ":edit /home/luukas/.config/nvim/init.lua | :cd ~/.config/nvim<CR>", {})
@@ -27,7 +31,7 @@ vim.keymap.set("n", "<leader>todo", ":TodoTelescope<CR>");
 -- vim.keymap.set("n", "<leader>el", "$");
 -- Go to the beginning of the line
 -- vim.keymap.set("n", "<leader>bl", "0");
-
+-- Toggle comment on the selected code block:
 
 -- Custom functionality
 vim.keymap.set("n", "<leader>raw", function()
