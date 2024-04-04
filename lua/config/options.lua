@@ -1,5 +1,5 @@
 vim.cmd("set relativenumber")
-vim.cmd("color gruvbox-material")
+vim.cmd("color catppuccin-mocha")
 vim.opt.foldlevelstart = 99
 vim.opt.expandtab = true -- Pressing TAB will insert spaces instead of TAB.
 vim.opt.tabstop = 4 -- A TAB character which is 4 spaces
