@@ -11,7 +11,7 @@ return {
 		lazy = false,
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "clangd", "tsserver" }
+				ensure_installed = { "lua_ls", "clangd", "tsserver" },
 			})
 		end,
 	},
@@ -19,22 +19,28 @@ return {
 		"neovim/nvim-lspconfig",
 		lazy = false,
 		config = function()
-            -- CMP nvim is the autocompletion engine.
+			-- CMP nvim is the autocompletion engine.
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 			local lspconfig = require("lspconfig")
 			lspconfig.lua_ls.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
 			})
 			lspconfig.clangd.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
 			})
 			lspconfig.tsserver.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
+			})
+			lspconfig.marksman.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.svelte.setup({
+				capabilities = capabilities,
 			})
 
 			-- se: Show Explanation
-			vim.keymap.set('n', '<leader>se', vim.diagnostic.open_float, {})
+			vim.keymap.set("n", "<leader>se", vim.diagnostic.open_float, {})
 			-- sd: Show definition
 			vim.keymap.set("n", "<leader>sd", vim.lsp.buf.hover, {})
 			-- gd: Go to definition

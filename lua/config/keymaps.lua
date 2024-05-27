@@ -28,6 +28,10 @@ vim.keymap.set("n", "<leader>todo", ":TodoTelescope<CR>")
 -- Go to the beginning of the line
 -- vim.keymap.set("n", "<leader>bl", "0");
 -- Toggle comment on the selected code block:
+vim.keymap.set("n", "<leader>pw", ":MarkdownPreviewToggle<CR>")
+
+-- Map Ctrl+c as esc
+vim.keymap.set("i", "<C-c>", "<Esc>")
 
 --
 -- Custom functionality

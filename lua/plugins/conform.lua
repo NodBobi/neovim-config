@@ -15,6 +15,9 @@ return {
 					command = "clang-format",
 					args = { "-style", "WebKit" },
 				},
+				["jq"] = {
+					args = { "--tab" },
+				},
 			},
 
 			-- Specify different formatters for different filetypes
@@ -24,6 +27,7 @@ return {
 				typescript = { "prettier" },
 				sh = { "beautysh" },
 				c = { "clang-format" },
+				json = { "jq" },
 			},
 
 			format_on_save = {

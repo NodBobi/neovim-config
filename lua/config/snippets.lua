@@ -25,3 +25,16 @@ luasnip.add_snippets("typescript", {
 		text({ "", "}" }),
 	}),
 })
+
+luasnip.add_snippets("markdown", {
+	snippet("meta", {
+		text({ "---", "title: " }),
+		input(1, "file_meta_title"),
+		text({ "", "date: " }),
+		input(2, os.date("%A, %B %d %Y")),
+		text({ "", "tags: " }),
+		text({ "", "\t- " }),
+		input(3, "programming"),
+		text({ "", "---" }),
+	}),
+})
